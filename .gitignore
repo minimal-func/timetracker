@@ -1,0 +1,14 @@
+/.bundle
+/doc
+/log/*
+!/log/.keep
+/tmp
+*.DS_Store
+*.byebug_history
+/.env
+/public/uploads/*
+/public/assets/*
+/config/database.yml
+/coverage
+*.rdb
+
