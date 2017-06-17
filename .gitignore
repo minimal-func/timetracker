@@ -8,7 +8,6 @@
 /.env
 /public/uploads/*
 /public/assets/*
-/config/database.yml
 /coverage
 *.rdb
 
