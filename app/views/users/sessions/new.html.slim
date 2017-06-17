@@ -3,18 +3,18 @@
     .field
       .ui.left.icon.input
         i class="user icon"
-        = f.input :email, label: false, required: false, autofocus: true, placeholder: "Ваша эл.почта", wrapper: false
+        = f.input :email, label: false, required: false, autofocus: true, placeholder: "Your email", wrapper: false
     .field
       .ui.left.icon.input
         i class="lock icon"
-        = f.input :password, label: false, required: false, placeholder: "Ваш Пароль", wrapper: false
+        = f.input :password, label: false, required: false, placeholder: "Your password", wrapper: false
 
-    = f.button :submit, "Войти" , class: "ui fluid large teal submit button"
-
-  .ui.message
-    span Нет аккаунта?&nbsp;
-    = link_to "Зарегистрироваться", new_registration_path(resource_name)
+    = f.button :submit, "Login" , class: "ui fluid large teal submit button"
 
   .ui.message
-    span Забыли пароль?&nbsp;
-    = link_to "Задайте новый", new_password_path(resource_name)
+    span No account?&nbsp;
+    = link_to "Sign up", new_registration_path(resource_name)
+
+  .ui.message
+    span Forgot password?&nbsp;
+    = link_to "Set new password", new_password_path(resource_name)
