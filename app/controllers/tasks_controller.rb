@@ -2,8 +2,12 @@ class TasksController < ApplicationController
   def index
     @projects = current_user.projects
     @current_project = Project.find(params[:project_id])
+
+    @pagy, @tasks = pagy(@current_project.tasks.order(created_at: :desc), items: 10)
+
+
     @tasks_presenter = {
-      tasks: @current_project.tasks,
+      tasks: @tasks,
       form: {
         action: project_tasks_url(@current_project.id),
         csrf_param: request_forgery_protection_token,

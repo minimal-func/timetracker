@@ -20,3 +20,5 @@ header class="header header-left"
 main class="main"
   .wrapper
     = react_component("TaskBox", { presenter: @tasks_presenter.to_json, prerender: true})
+
+    == pagy_nav(@pagy)
