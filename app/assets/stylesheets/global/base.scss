@@ -135,10 +135,9 @@ a{
 	}
 }
 @mixin solid($color: $link-color, $hover-color: $link-color-hover, $offset: .2em){
-	+dt($color, $hover-color, $offset){
-		border-bottom-style: solid;
-	}
+  border-bottom-style: solid;
 }
+
 @mixin line($color: $link-color, $hover-color: $link-color-hover, $alpha: .5){
 	color: $color;
 	color: fade-out($color, .5);

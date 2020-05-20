@@ -65,6 +65,14 @@
 							vertical-align: middle;
 							transition: color 0.2s $easeInOutCubic;
 						}
+                        .active{
+                            span{
+                              color: #fff;
+                            }
+                            svg path{
+                              fill: #FFF;
+                            }
+                        }
 						&:hover{
 							span{
 								color: #fff;

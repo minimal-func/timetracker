@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  resources :tasks, only: [:create, :index] do
+  resources :projects, only: [:new, :create, :index] do
+    resources :tasks, only: [:create, :index] do
+      post :finish
+    end
+  end
+
+  resources :tasks, only: [] do
     post :finish
   end
 
@@ -8,5 +14,5 @@ Rails.application.routes.draw do
     registrations: "users/registrations"
   }
 
-  root to: "tasks#index"
+  root to: "projects#index"
 end

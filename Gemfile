@@ -1,13 +1,13 @@
 source "https://rubygems.org"
 
-ruby "2.4.1"
+ruby "2.6.5"
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
 
-gem "rails", "~> 5.1.1"
+gem "rails", "~> 6.0.1"
 gem "pg"
 
 # assets
@@ -25,62 +25,39 @@ gem "puma", "~> 3.0"
 gem "sass-rails"
 
 gem "active_link_to"
-gem "therubyracer", platforms: :ruby
 gem "uglifier"
 gem "carrierwave"
 
 gem "mini_magick"
 gem "font-awesome-rails"
 gem "simple_form"
-gem "cocoon"
 
 gem "devise"
-gem "kaminari"
-gem "responders"
-gem "seedbank"
-gem "pundit"
 gem "slim"
-gem "httparty"
 
-gem "acts_as_list"
-gem "acts-as-taggable-on"
+gem 'pagy'
 
 group :staging, :production do
   gem "rails_12factor"
 
   gem "redis"
-  gem "capistrano"
-  gem "capistrano-bundler"
-  gem "capistrano-rails"
-  gem "capistrano-rbenv", github: "capistrano/rbenv"
 end
 
 group :test do
   gem "simplecov", require: false
-  gem "capybara"
-  gem "capybara-webkit"
   gem "database_cleaner"
   gem "email_spec"
-  gem "formulaic"
   gem "launchy"
-  gem "shoulda-matchers", require: false
   gem "timecop"
   gem "webmock", require: false
-  gem "rails-controller-testing"
 end
 
 group :development, :test do
   gem "awesome_print"
-  gem "brakeman", require: false
   gem "bundler-audit"
   gem "byebug"
-  gem "dotenv-rails"
-  gem "factory_girl_rails"
   gem "fuubar"
-  gem "jasmine"
-  gem "jasmine-jquery-rails"
   gem "pry-rails"
-  gem "rails_best_practices"
   gem "rspec-rails"
   gem "rubocop"
   gem "scss_lint", require: false
