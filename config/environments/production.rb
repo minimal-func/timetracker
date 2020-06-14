@@ -86,8 +86,6 @@ Rails.application.configure do
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end
 
-  Rails.application.config.hosts << "tracker.ildarsafin.tech"
-
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   config.middleware.insert_before 0, Rack::Cors do
