@@ -14,6 +14,7 @@ gem "pg"
 gem "autoprefixer-rails"
 gem "jquery-rails"
 gem "jquery-ui-rails"
+gem 'rack-cors'
 
 gem "react-rails"
 gem "semantic-ui-sass", github: "doabit/semantic-ui-sass"
