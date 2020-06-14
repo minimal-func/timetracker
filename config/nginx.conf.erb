@@ -48,13 +48,6 @@ application/javascript application/x-javascript application/json
 application/rss+xml application/vnd.ms-fontobject application/x-font-ttf
 application/xml font/opentype image/svg+xml text/xml;
 
-<% if @app_finder.multi_mode? %>
-  # Default server entry for mass deployment mode.
-  server {
-  <%= include_passenger_internal_template('mass_deployment_default_server.erb', 12) %>
-  }
-<% end %>
-
 <% for app in @apps %>
   server {
   access_log /home/ubuntu/timetracker/log/nginx.log escaped_log;
